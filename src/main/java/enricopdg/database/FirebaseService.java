@@ -15,6 +15,7 @@ import java.util.Map;
 public class FirebaseService {
     private static Firestore db;
     private static final String collection = "books";
+
     public static void init() {
         try {
             FileInputStream serviceAccount =
@@ -50,7 +51,7 @@ public class FirebaseService {
 
             ApiFuture<QuerySnapshot> querySnapshot = query.get();
 
-            for (DocumentSnapshot document : querySnapshot.get().getDocuments() ) {
+            for (DocumentSnapshot document : querySnapshot.get().getDocuments()) {
                 System.out.println(document.getData());
             }
 
@@ -58,6 +59,7 @@ public class FirebaseService {
             e.printStackTrace();
         }
     }
+
     public static void deleteBook(Book book) {
         try {
             ApiFuture<WriteResult> writeResult = db.collection(collection).document(book.getTitle()).delete();
@@ -66,6 +68,7 @@ public class FirebaseService {
             e.printStackTrace();
         }
     }
+
     public static void updateBook(Book book) {
         try {
             DocumentReference docRef = db.collection(collection).document(book.getTitle());

@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f05b959-54a1-41ac-842b-8a13bcbdd68d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/enricopdg/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/enricopdg/database/FirebaseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/enricopdg/objects/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/enricopdg/objects/ValidateBook.java" afterDir="false" />
-    </list>
+    <list default="true" id="4f05b959-54a1-41ac-842b-8a13bcbdd68d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +33,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "onboarding.tips.debug.path": "/home/enrico/projects/java/Demo/src/main/java/enricopdg/Main.java",
     "settings.editor.selected.configurable": "preferences.keymap"
   }
@@ -60,5 +48,10 @@
       <updated>1683942615514</updated>
     </task>
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:com.google.protobuf:protobuf-java" />
+    <option featureType="dependencySupport" implementationName="java:com.google.cloud:google-cloud-storage" />
+    <option featureType="dependencySupport" implementationName="java:io.grpc:grpc-api" />
   </component>
 </project>
