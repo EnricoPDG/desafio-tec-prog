@@ -7,6 +7,7 @@ import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;
 import com.google.firebase.cloud.FirestoreClient;
 import enricopdg.objects.Book;
+import enricopdg.objects.ValidateBook;
 
 import java.io.FileInputStream;
 import java.util.HashMap;
@@ -36,6 +37,7 @@ public class FirebaseService {
 
     public static void insertBook(Book book) {
         try {
+            ValidateBook.validateBook(book);
             ApiFuture<WriteResult> future = db.collection(collection).document(book.getTitle()).set(book);
             System.out.println("Update time: " + future.get().getUpdateTime());
         } catch (Exception e) {
@@ -45,6 +47,7 @@ public class FirebaseService {
 
     public static void searchBook(Book book) {
         try {
+            ValidateBook.validateBook(book);
             CollectionReference books = db.collection(collection);
 
             Query query = books.whereEqualTo("title", book.getTitle());
@@ -62,6 +65,7 @@ public class FirebaseService {
 
     public static void deleteBook(Book book) {
         try {
+            ValidateBook.validateBook(book);
             ApiFuture<WriteResult> writeResult = db.collection(collection).document(book.getTitle()).delete();
             System.out.println("Update time: " + writeResult.get().getUpdateTime());
         } catch (Exception e) {
@@ -71,6 +75,7 @@ public class FirebaseService {
 
     public static void updateBook(Book book) {
         try {
+            ValidateBook.validateBook(book);
             DocumentReference docRef = db.collection(collection).document(book.getTitle());
             Map<String, Object> data = new HashMap<>();
             data.put("author", book.getAuthor());
